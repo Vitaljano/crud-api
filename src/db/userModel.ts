@@ -1,7 +1,15 @@
 import { v4 as uuidv4 } from 'uuid';
 import { User } from '../types/types';
 
-const users: User[] = [];
+let users: User[] = [];
+
+export function syncDb(db: User[]) {
+  users = db;
+}
+
+export function getDb() {
+  return users;
+}
 
 export function findAll() {
   return new Promise((resolve, reject) => {

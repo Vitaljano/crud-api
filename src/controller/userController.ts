@@ -1,8 +1,8 @@
 import * as Users from '../db/userModel';
 import CODES from '../codes';
-import http from 'http';
+import * as http from 'http';
 import { validate as uuidValidate, validate } from 'uuid';
-import { User, UserCreate, isUserCreate } from '../types/types';
+import { isUserCreate } from '../types/types';
 
 export async function getUsers(
   req: http.IncomingMessage,
